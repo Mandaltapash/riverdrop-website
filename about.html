@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – RiverDrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(135deg, #2D1B00 0%, #4A2A00 50%, #6B4C2A 100%);
+      color: white;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .about-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: white;
+      margin-bottom: 16px;
+    }
+    .about-hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .mission-card {
+      background: white;
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .mission-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+    }
+    .mission-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    .mission-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .mission-text {
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    .stats-section {
+      background: var(--light-bg);
+    }
+    .stat-box {
+      text-align: center;
+      background: white;
+      border-radius: 16px;
+      padding: 40px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+    .stat-box:hover {
+      transform: translateY(-4px);
+    }
+    .stat-number {
+      font-family: 'Lato', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .stat-label {
+      font-size: 1rem;
+      color: var(--text-mid);
+      font-weight: 700;
+    }
+
+    .team-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+    }
+    .team-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--light-bg);
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .team-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .team-role {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .team-bio {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, #FFF0E0, #FFD4A8);
+      text-align: center;
+      padding: 80px 0;
+    }
+    .cta-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .cta-banner p {
+      font-size: 1.1rem;
+      color: var(--text-mid);
+      margin-bottom: 36px;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">🚣 RiverDrop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="ingredients.html">Ingredients</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="container" style="padding-top:20px;padding-bottom:4px;">
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <span>About</span>
+  </nav>
+</div>
+
+<!-- About Hero -->
+<section class="about-hero">
+  <div class="container">
+    <h1>We Are RiverDrop</h1>
+    <p>Born in a Chennai kitchen, built for India.</p>
+  </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;">Mission &amp; Vision</h2>
+    <p class="section-subtitle" style="text-align:center;">What drives us every single day</p>
+    <div class="grid-2">
+      <div class="mission-card">
+        <div class="mission-icon">🎯</div>
+        <div class="mission-title">Our Mission</div>
+        <p class="mission-text">
+          At RiverDrop, our mission is simple: to bring the authentic flavours of India's rich beverage heritage to every modern table — with absolutely zero compromises on quality, purity, or taste. We believe that every sip should feel like a memory, connecting you to the traditions and kitchens that shaped Indian culture for centuries. We use time-honoured recipes, source ingredients directly from trusted farmers, and craft every bottle with the care of a family kitchen.
+        </p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon">🌍</div>
+        <div class="mission-title">Our Vision</div>
+        <p class="mission-text">
+          We envision RiverDrop as India's most loved and most trusted beverage brand by 2030 — a household name that families reach for during festivals, summer afternoons, festive celebrations, and quiet evenings alike. We want to prove that authenticity and scale can coexist; that a brand rooted in tradition can thrive in the modern world. Beyond India, we aspire to bring our flavours to the global Indian diaspora and to curious palates worldwide.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Numbers that Matter -->
+<section class="section stats-section">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;">Numbers That Matter</h2>
+    <p class="section-subtitle" style="text-align:center;">Our journey in numbers</p>
+    <div class="grid-4">
+      <div class="stat-box">
+        <span class="stat-number">10+</span>
+        <div class="stat-label">Flavours</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">50K+</span>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">15</span>
+        <div class="stat-label">States</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">Zero</span>
+        <div class="stat-label">Preservatives</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;">Meet the Team</h2>
+    <p class="section-subtitle" style="text-align:center;">The people behind every bottle</p>
+    <div class="grid-3">
+
+      <div class="team-card">
+        <div class="team-avatar">🧑‍🍳</div>
+        <div class="team-name">Arjun Nair</div>
+        <div class="team-role">Co-Founder &amp; Head of Flavours</div>
+        <p class="team-bio">Arjun spent 8 years researching traditional Indian recipes before launching RiverDrop. His deep passion for culinary heritage and flavour science drives every new product we create.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">👩‍💼</div>
+        <div class="team-name">Priya Menon</div>
+        <div class="team-role">Co-Founder &amp; CEO</div>
+        <p class="team-bio">A former FMCG executive with a passion for bringing authenticity back to Indian beverages. Priya brings sharp business acumen and a deep love for India's food culture to the brand.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">👨‍🔬</div>
+        <div class="team-name">Vikram Rao</div>
+        <div class="team-role">Head of Quality</div>
+        <p class="team-bio">Ensuring every bottle meets our uncompromising standards of purity and taste. Vikram's background in food science ensures RiverDrop's quality is never an afterthought — it's the foundation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="section" style="background: var(--light-bg);">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;">Our Values</h2>
+    <p class="section-subtitle" style="text-align:center;">What we stand for, every single day</p>
+    <div class="grid-4">
+
+      <div class="feature-box">
+        <div class="feature-icon">🏺</div>
+        <div class="feature-title">Authenticity</div>
+        <p class="feature-desc">Every recipe we make is rooted in India's rich culinary heritage. We never cut corners or compromise on tradition — if it doesn't taste like home, it doesn't leave our kitchen.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">🌿</div>
+        <div class="feature-title">Purity</div>
+        <p class="feature-desc">No artificial colours. No preservatives. No shortcuts. We use only the finest natural ingredients, sourced directly from trusted farmers across India, to create drinks that are as clean as they are delicious.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">♻️</div>
+        <div class="feature-title">Sustainability</div>
+        <p class="feature-desc">We are committed to reducing our environmental footprint — from eco-friendly packaging to supporting sustainable farming practices. The rivers that inspire our name deserve our protection.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">🤝</div>
+        <div class="feature-title">Community</div>
+        <p class="feature-desc">RiverDrop was born in a community and continues to thrive because of one. We partner with local farmers, support small producers, and give back to the communities that nourish us.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Join the RiverDrop Family</h2>
+    <p>Experience the taste of India — crafted with love, delivered to your door.</p>
+    <div class="cta-buttons">
+      <a href="products.html" class="btn btn-primary">Shop Now</a>
+      <a href="story.html" class="btn btn-outline">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🚣 RiverDrop</div>
+        <p class="footer-desc">Handcrafted Indian beverages rooted in tradition. Pure, natural, and delicious.</p>
+        <p style="margin-top:16px;font-size:1.5rem;">🌿 🚣 🫙</p>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Our Drinks</div>
+        <ul class="footer-links">
+          <li><a href="aam-panna.html">Aam Panna</a></li>
+          <li><a href="jaljeera.html">Jaljeera</a></li>
+          <li><a href="rose-sherbat.html">Rose Sherbat</a></li>
+          <li><a href="kokum.html">Kokum</a></li>
+          <li><a href="thandai.html">Thandai</a></li>
+          <li><a href="products.html">View All →</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Connect</div>
+        <ul class="footer-links">
+          <li>📍 Bengaluru, India</li>
+          <li>📞 +91 80 1234 5678</li>
+          <li>📧 hello@riverdrop.in</li>
+          <li style="margin-top:16px;font-size:1.5rem;"><a href="#" style="text-decoration:none;">📘</a> <a href="#" style="text-decoration:none;">📸</a> <a href="#" style="text-decoration:none;">🐦</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RiverDrop. All rights reserved. Made with ❤️ in India.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RiverDrop Reads — Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ---- Blog page specific styles ---- */
+    .blog-hero {
+      background: linear-gradient(135deg, #FFF0E0 0%, #FFE4C8 100%);
+      padding: 72px 0;
+      text-align: center;
+    }
+    .blog-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+    .blog-hero p {
+      font-size: 1.15rem;
+      color: var(--text-mid);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Featured Post */
+    .featured-post {
+      background: var(--light-bg);
+      border-radius: 24px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+    .featured-visual {
+      height: 300px;
+      background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+      border-radius: 16px;
+      overflow: hidden;
+      padding: 0;
+    }
+    .blog-brand-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .featured-tag {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .featured-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .featured-excerpt {
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+    .featured-meta {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    /* Newsletter CTA */
+    .newsletter-section {
+      background: linear-gradient(135deg, var(--primary) 0%, #c43e10 100%);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .newsletter-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+    }
+    .newsletter-section p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 32px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      min-width: 240px;
+      padding: 14px 20px;
+      border-radius: 8px;
+      border: none;
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+      outline: none;
+    }
+    .newsletter-form .btn-secondary {
+      padding: 14px 28px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🚣 RiverDrop</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="ingredients.html">Ingredients</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="container" style="padding-top:20px;padding-bottom:4px;">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Blog</span>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="blog-brand-label">RiverDrop Journal</span>
+      <h1>RiverDrop Reads</h1>
+      <p>Stories, recipes, and nostalgia from our kitchen to yours</p>
+    </div>
+  </section>
+
+  <!-- FEATURED + BLOG GRID -->
+  <section class="section">
+    <div class="container">
+      <!-- Featured Post -->
+      <div class="featured-post">
+        <div class="featured-visual">
+          <img src="images/aam-panna.jpg" alt="RiverDrop Aam Panna chilled bottle with fresh raw mangoes" style="width:100%;height:100%;object-fit:cover;border-radius:16px;display:block;" />
+        </div>
+        <div>
+          <span class="blog-brand-label">RiverDrop · Featured Story</span>
+          <span class="featured-tag">RECIPE</span>
+          <h2 class="featured-title">5 Ways to Use Aam Panna Beyond Just Drinking It</h2>
+          <p class="featured-excerpt">Aam Panna is India's quintessential summer cooler, but its tangy, roasted-cumin-spiced profile makes it a secret weapon in the kitchen too. Use it as a vibrant marinade for grilled paneer and chicken, swirl it into sweet-and-sour mint chutneys, or freeze it into refreshing popsicles for hot afternoons. Once you start experimenting, a single bottle will never stay in your fridge for long.</p>
+          <p class="featured-meta">By Priya Menon · June 2026</p>
+          <a href="#" class="btn btn-primary">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <h2 class="section-title">Latest Stories</h2>
+      <p class="section-subtitle">Explore traditions, farmer journeys, and culinary inspiration across India.</p>
+
+      <div class="grid-3">
+        <!-- Card 1 -->
+        <article class="blog-card">
+          <div class="blog-card-image" style="overflow:hidden;padding:0;"><img src="images/jaljeera.jpg" alt="RiverDrop Jaljeera chilled bottle with fresh mint and cumin" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">HEALTH</span>
+            <h3 class="blog-title">Why Jaljeera is India's Original Sports Drink</h3>
+            <p class="blog-excerpt">Before there were energy drinks, there was jaljeera. Here's the science behind why this ancient recipe works.</p>
+            <div class="blog-meta">RiverDrop Journal · June 2026</div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="blog-card">
+          <div class="blog-card-image" style="overflow:hidden;padding:0;"><img src="images/rose-sherbat.jpg" alt="RiverDrop Rose Sherbat chilled bottle with rose petals" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">CULTURE</span>
+            <h3 class="blog-title">The Royal History of Rose Sherbat in Mughal India</h3>
+            <p class="blog-excerpt">Dive into the 500-year-old history of rose sherbat, from Mughal courts to modern bottles.</p>
+            <div class="blog-meta">RiverDrop Journal · May 2026</div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="blog-card">
+          <div class="blog-card-image" style="overflow:hidden;padding:0;"><img src="images/kanji.jpg" alt="RiverDrop Black Carrot Kanji probiotic bottle" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">RECIPE</span>
+            <h3 class="blog-title">How to Make Kanji at Home (And Why You Should)</h3>
+            <p class="blog-excerpt">Our head of flavours shares the traditional recipe for black carrot kanji — and why gut health matters.</p>
+            <div class="blog-meta">RiverDrop Journal · May 2026</div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="blog-card">
+          <div class="blog-card-image" style="overflow:hidden;padding:0;"><img src="images/kokum.jpg" alt="RiverDrop Kokum coastal cooler bottle" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">TRAVEL</span>
+            <h3 class="blog-title">The Kokum Trail: Exploring the Konkan Coast</h3>
+            <p class="blog-excerpt">A journey through Goa and coastal Maharashtra in search of the best kokum shrub recipes.</p>
+            <div class="blog-meta">RiverDrop Journal · April 2026</div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="blog-card">
+          <div class="blog-card-image" style="overflow:hidden;padding:0;"><img src="images/thandai.jpg" alt="RiverDrop Thandai spiced almond saffron bottle" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">FESTIVAL</span>
+            <h3 class="blog-title">Thandai Traditions: How Holi is Celebrated Across India</h3>
+            <p class="blog-excerpt">From Mathura to Mumbai, every region has its own Thandai twist. We explore them all.</p>
+            <div class="blog-meta">RiverDrop Journal · March 2026</div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="blog-card">
+          <div class="blog-card-image" style="overflow:hidden;padding:0;"><img src="images/aam-panna.jpg" alt="RiverDrop Aam Panna raw mangoes from Thrissur" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="blog-card-body">
+            <span class="blog-tag">FARMER STORIES</span>
+            <h3 class="blog-title">Meet Rajan: The Mango Farmer Behind Your Aam Panna</h3>
+            <p class="blog-excerpt">A visit to our partner farm in Thrissur, where the best raw mangoes in India are grown.</p>
+            <div class="blog-meta">RiverDrop Journal · February 2026</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CTA -->
+  <section class="newsletter-section">
+    <div class="container">
+      <h2>Sip Stories in Your Inbox</h2>
+      <p>Get seasonal recipes, farmer stories, and early access to new RiverDrop flavours every month.</p>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" placeholder="Enter your email address" required />
+        <button type="submit" class="btn btn-secondary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🚣 RiverDrop</div>
+          <p class="footer-desc">Handcrafted Indian beverages rooted in tradition. Pure, natural, and delicious.</p>
+          <p style="margin-top:16px;font-size:1.5rem;">🌿 🚣 🫙</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Our Drinks</div>
+          <ul class="footer-links">
+            <li><a href="aam-panna.html">Aam Panna</a></li>
+            <li><a href="jaljeera.html">Jaljeera</a></li>
+            <li><a href="rose-sherbat.html">Rose Sherbat</a></li>
+            <li><a href="kokum.html">Kokum</a></li>
+            <li><a href="thandai.html">Thandai</a></li>
+            <li><a href="products.html">View All →</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Connect</div>
+          <ul class="footer-links">
+            <li>📍 Bengaluru, India</li>
+            <li>📞 +91 80 1234 5678</li>
+            <li>📧 hello@riverdrop.in</li>
+            <li style="margin-top:16px;font-size:1.5rem;"><a href="#" style="text-decoration:none;">📘</a> <a href="#" style="text-decoration:none;">📸</a> <a href="#" style="text-decoration:none;">🐦</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RiverDrop. All rights reserved. Made with ❤️ in India.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

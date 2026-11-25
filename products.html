@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products – RiverDrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .filter-pill {
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 20px;
+      margin: 4px;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+      text-decoration: none;
+      background: white;
+      transition: 0.2s;
+    }
+    .filter-pill:hover,
+    .filter-pill.active {
+      background: var(--primary);
+      color: white;
+    }
+    .filter-row {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .page-hero {
+      background: linear-gradient(135deg, #FFF0E0, #FFD4A8);
+      padding: 60px 0;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .page-hero p {
+      font-size: 1.1rem;
+      color: var(--text-mid);
+    }
+    .stat-number {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--primary);
+    }
+    .bundle-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .bundle-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+    }
+    .bundle-emoji {
+      font-size: 3.5rem;
+      margin-bottom: 16px;
+    }
+    .bundle-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .bundle-desc {
+      color: var(--text-mid);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .bundle-price {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">🚣 RiverDrop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="ingredients.html">Ingredients</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="container" style="padding-top:20px;padding-bottom:4px;">
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <span>Products</span>
+  </nav>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Our Drinks Catalog</h1>
+    <p>Browse all 10 handcrafted flavours</p>
+  </div>
+</section>
+
+<!-- Filter Row -->
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="filter-row">
+      <span class="filter-pill active">All</span>
+      <span class="filter-pill">Summer</span>
+      <span class="filter-pill">Winter</span>
+      <span class="filter-pill">Digestive</span>
+      <span class="filter-pill">Floral</span>
+      <span class="filter-pill">Coastal</span>
+    </div>
+  </div>
+</section>
+
+<!-- Product Grid -->
+<section class="section" style="padding-top:32px;">
+  <div class="container">
+    <div class="grid-3">
+
+      <!-- 1. Aam Panna -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#c8e6c9,#a5d6a7);">
+          <img src="images/aam-panna.jpg" alt="RiverDrop Aam Panna" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="badge badge-popular" style="position:absolute;top:16px;right:16px;">Popular</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Aam Panna</div>
+          <div class="product-card-tagline">Raw mango summer classic</div>
+          <div class="product-price">₹35</div>
+          <a href="aam-panna.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 2. Jaljeera -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#f9fbe7,#dce775);">
+          <img src="images/jaljeera.jpg" alt="RiverDrop Jaljeera" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="badge badge-popular" style="position:absolute;top:16px;right:16px;">Popular</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Jaljeera</div>
+          <div class="product-card-tagline">Tangy digestive delight</div>
+          <div class="product-price">₹30</div>
+          <a href="jaljeera.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 3. Rose Sherbat -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#fce4ec,#f48fb1);">
+          <img src="images/rose-sherbat.jpg" alt="RiverDrop Rose Sherbat" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="badge badge-new" style="position:absolute;top:16px;right:16px;">New</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Rose Sherbat</div>
+          <div class="product-card-tagline">Floral &amp; refreshing</div>
+          <div class="product-price">₹40</div>
+          <a href="rose-sherbat.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 4. Kokum -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#ede7f6,#b39ddb);">
+          <img src="images/kokum.jpg" alt="RiverDrop Kokum" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="badge badge-popular" style="position:absolute;top:16px;right:16px;">Popular</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Kokum</div>
+          <div class="product-card-tagline">Coastal cool drink</div>
+          <div class="product-price">₹35</div>
+          <a href="kokum.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 5. Thandai -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#fff3e0,#ffcc80);">
+          <img src="images/thandai.jpg" alt="RiverDrop Thandai" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="badge badge-limited" style="position:absolute;top:16px;right:16px;">Limited</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Thandai</div>
+          <div class="product-card-tagline">Festive holi special</div>
+          <div class="product-price">₹45</div>
+          <a href="thandai.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 6. Kanji -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#fce4ec,#ef9a9a);">
+          <img src="images/kanji.jpg" alt="RiverDrop Kanji" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="badge badge-new" style="position:absolute;top:16px;right:16px;">New</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Kanji</div>
+          <div class="product-card-tagline">Probiotic fermented drink</div>
+          <div class="product-price">₹38</div>
+          <a href="kanji.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 7. Bel Sherbat -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#f9fbe7,#c5e1a5);">
+          <img src="images/bel-sherbat.jpg" alt="RiverDrop Bel Sherbat" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="badge badge-new" style="position:absolute;top:16px;right:16px;">New</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Bel Sherbat</div>
+          <div class="product-card-tagline">Wood apple summer cooler</div>
+          <div class="product-price">₹32</div>
+          <a href="products.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 8. Nimbu Pani -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#fffde7,#fff176);">
+          <img src="images/nimbu-pani.jpg" alt="RiverDrop Nimbu Pani" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Nimbu Pani</div>
+          <div class="product-card-tagline">Classic Indian lemonade</div>
+          <div class="product-price">₹25</div>
+          <a href="products.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 9. Imli Jaljeera -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#efebe9,#bcaaa4);">
+          <img src="images/imli-jaljeera.jpg" alt="RiverDrop Imli Jaljeera" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Imli Jaljeera</div>
+          <div class="product-card-tagline">Tamarind twist</div>
+          <div class="product-price">₹30</div>
+          <a href="products.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 10. Chilled Chaas -->
+      <div class="product-card">
+        <div class="product-card-image" style="background: linear-gradient(135deg,#e3f2fd,#90caf9);">
+          <img src="images/chilled-chaas.jpg" alt="RiverDrop Chilled Chaas" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="badge badge-popular" style="position:absolute;top:16px;right:16px;">Popular</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-brand-tag" style="font-size:0.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;">RiverDrop</div>
+          <div class="product-card-name">Chilled Chaas</div>
+          <div class="product-card-tagline">Refreshing spiced buttermilk</div>
+          <div class="product-price">₹28</div>
+          <a href="products.html" class="btn btn-outline" style="margin-bottom:10px;text-align:center;">View Details</a>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Gift Packs & Bundles -->
+<section class="section" style="background: var(--light-bg);">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;">Gift Packs &amp; Bundles</h2>
+    <p class="section-subtitle" style="text-align:center;">Share the joy of authentic Indian flavours with your loved ones</p>
+    <div class="grid-2">
+      <div class="bundle-card">
+        <div class="bundle-emoji">🎁</div>
+        <div class="bundle-name">Summer Pack</div>
+        <div class="bundle-desc">6 bottles of our bestselling Aam Panna &amp; Jaljeera — the perfect summer duo. Great for gifting or stocking up!</div>
+        <div class="bundle-price">₹189</div>
+        <button class="btn btn-primary">Add to Cart</button>
+      </div>
+      <div class="bundle-card">
+        <div class="bundle-emoji">🎀</div>
+        <div class="bundle-name">Festive Box</div>
+        <div class="bundle-desc">4 bottles of Thandai &amp; Rose Sherbat — a curated festive set perfect for celebrations and gifting on special occasions.</div>
+        <div class="bundle-price">₹169</div>
+        <button class="btn btn-primary">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🚣 RiverDrop</div>
+        <p class="footer-desc">Handcrafted Indian beverages rooted in tradition. Pure, natural, and delicious.</p>
+        <p style="margin-top:16px;font-size:1.5rem;">🌿 🚣 🫙</p>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Our Drinks</div>
+        <ul class="footer-links">
+          <li><a href="aam-panna.html">Aam Panna</a></li>
+          <li><a href="jaljeera.html">Jaljeera</a></li>
+          <li><a href="rose-sherbat.html">Rose Sherbat</a></li>
+          <li><a href="kokum.html">Kokum</a></li>
+          <li><a href="thandai.html">Thandai</a></li>
+          <li><a href="products.html">View All →</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Connect</div>
+        <ul class="footer-links">
+          <li>📍 Bengaluru, India</li>
+          <li>📞 +91 80 1234 5678</li>
+          <li>📧 hello@riverdrop.in</li>
+          <li style="margin-top:16px;font-size:1.5rem;"><a href="#" style="text-decoration:none;">📘</a> <a href="#" style="text-decoration:none;">📸</a> <a href="#" style="text-decoration:none;">🐦</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RiverDrop. All rights reserved. Made with ❤️ in India.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aam Panna – RiverDrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ---- Page-specific styles ---- */
+    .breadcrumb {
+      background: var(--light-bg);
+      padding: 14px 0;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+    }
+    .breadcrumb a { color: var(--primary); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { margin: 0 8px; }
+
+    .product-detail-hero {
+      padding: 60px 0;
+    }
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .product-detail-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .product-visual {
+      background: linear-gradient(135deg, #c8e6c9, #66bb6a);
+      border-radius: 24px;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .product-brand-tag {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .product-info { display: flex; flex-direction: column; gap: 20px; }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      font-family: 'Lato', sans-serif;
+      width: fit-content;
+    }
+    .badge-popular { background: var(--secondary); color: var(--text-dark); }
+    .badge-new { background: var(--accent); color: white; }
+
+    .product-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.1;
+      margin: 0;
+    }
+    .product-tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--text-mid);
+      margin: 0;
+    }
+    .product-price-large {
+      font-family: 'Lato', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+    }
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Lato', sans-serif;
+    }
+    .stars { color: #F5A623; font-size: 1.3rem; letter-spacing: 2px; }
+    .rating-score { font-weight: 700; font-size: 1.1rem; color: var(--text-dark); }
+    .rating-count { font-size: 0.9rem; color: var(--text-mid); }
+
+    .product-description {
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .ingredients-list li {
+      background: var(--light-bg);
+      border: 1px solid #F5A62340;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .section-label {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .nutrition-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+    }
+    .nutrition-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #F0E0D0;
+      color: var(--text-mid);
+    }
+    .nutrition-table td:first-child { font-weight: 700; color: var(--text-dark); }
+    .nutrition-table tr:last-child td { border-bottom: none; }
+    .nutrition-table tr:nth-child(even) td { background: var(--light-bg); }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 600px) { .benefits-grid { grid-template-columns: 1fr; } }
+
+    .benefit-box {
+      background: var(--light-bg);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .benefit-icon { font-size: 2rem; margin-bottom: 8px; }
+    .benefit-title {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+
+    .product-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+
+    /* Reviews */
+    .reviews-section { background: var(--light-bg); }
+    .review-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+    .review-stars { color: #F5A623; font-size: 1.1rem; margin-bottom: 12px; }
+    .review-text {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.98rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      background: var(--light-bg);
+    }
+    .review-name {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+    .review-location { font-size: 0.82rem; color: var(--text-mid); }
+
+    /* "You May Also Like" product cards mini */
+    .also-like-section { padding: 80px 0; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🚣 RiverDrop</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="ingredients.html">Ingredients</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="products.html">Products</a>
+      <span>›</span>
+      Aam Panna
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL HERO -->
+  <section class="product-detail-hero">
+    <div class="container">
+      <div class="product-detail-grid">
+
+        <!-- LEFT: Visual -->
+        <div class="product-visual">
+          <img src="images/aam-panna.jpg" alt="RiverDrop Aam Panna" style="width:100%;height:100%;object-fit:cover;border-radius:24px;display:block;" />
+        </div>
+
+        <!-- RIGHT: Info -->
+        <div class="product-info">
+          <div class="badge badge-popular">⭐ Bestseller</div>
+
+          <div class="product-brand-tag">RiverDrop · Handcrafted Indian Beverage</div>
+          <h1 class="product-title">Aam Panna</h1>
+          <p class="product-tagline">Raw mango summer classic</p>
+
+          <div class="product-price-large">₹35 / 250ml</div>
+
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-score">4.9</span>
+            <span class="rating-count">(2,341 reviews)</span>
+          </div>
+
+          <p class="product-description">
+            Crafted from freshly harvested raw mangoes, our Aam Panna is a time-honoured Indian summer cooler that has been quenching thirsts for generations. Each bottle bursts with the tangy, earthy intensity of sun-kissed green mangoes, balanced with black salt and roasted cumin for that signature smoky depth. The perfect companion for scorching Indian summers — one chilled sip and your whole body breathes a sigh of relief.
+          </p>
+
+          <!-- Ingredients -->
+          <div>
+            <div class="section-label">Ingredients</div>
+            <ul class="ingredients-list">
+              <li>🌿 Raw Mango Pulp</li>
+              <li>🌿 Black Salt</li>
+              <li>🌿 Roasted Cumin</li>
+              <li>🌿 Fresh Mint</li>
+              <li>🌿 Jaggery</li>
+              <li>🌿 Water</li>
+            </ul>
+          </div>
+
+          <!-- Nutritional Facts -->
+          <div>
+            <div class="section-label">Nutritional Facts (per 250ml)</div>
+            <table class="nutrition-table">
+              <tbody>
+                <tr><td>Calories</td><td>65 kcal</td></tr>
+                <tr><td>Carbohydrates</td><td>16 g</td></tr>
+                <tr><td>Sugar</td><td>14 g</td></tr>
+                <tr><td>Sodium</td><td>180 mg</td></tr>
+                <tr><td>Vitamin C</td><td>45 mg</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Benefits -->
+          <div>
+            <div class="section-label">Why You'll Love It</div>
+            <div class="benefits-grid">
+              <div class="benefit-box">
+                <div class="benefit-icon">🌡️</div>
+                <div class="benefit-title">Beats Heat Stroke</div>
+              </div>
+              <div class="benefit-box">
+                <div class="benefit-icon">💊</div>
+                <div class="benefit-title">Rich in Vitamin C</div>
+              </div>
+              <div class="benefit-box">
+                <div class="benefit-icon">🧂</div>
+                <div class="benefit-title">Natural Electrolytes</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="product-actions">
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="products.html" class="btn btn-outline">Back to Products</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- YOU MAY ALSO LIKE -->
+  <section class="also-like-section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">You May Also Like</h2>
+      <p class="section-subtitle" style="text-align:center;">More refreshing sips from our collection</p>
+      <div class="grid-3">
+
+        <!-- Jaljeera -->
+        <div class="product-card">
+          <div class="product-card-image" style="overflow:hidden;padding:0;"><img src="images/jaljeera.jpg" alt="RiverDrop Jaljeera" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="product-card-body">
+            <div class="product-brand-tag">RiverDrop</div>
+            <div class="product-card-name">Jaljeera</div>
+            <div class="product-card-tagline">Tangy digestive delight</div>
+            <div class="product-price">₹30 / 250ml</div>
+            <a href="jaljeera.html" class="btn btn-primary">View Product</a>
+          </div>
+        </div>
+
+        <!-- Rose Sherbat -->
+        <div class="product-card">
+          <div class="product-card-image" style="overflow:hidden;padding:0;"><img src="images/rose-sherbat.jpg" alt="RiverDrop Rose Sherbat" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="product-card-body">
+            <div class="product-brand-tag">RiverDrop</div>
+            <div class="product-card-name">Rose Sherbat</div>
+            <div class="product-card-tagline">Floral elegance in every sip</div>
+            <div class="product-price">₹40 / 250ml</div>
+            <a href="rose-sherbat.html" class="btn btn-primary">View Product</a>
+          </div>
+        </div>
+
+        <!-- Kokum -->
+        <div class="product-card">
+          <div class="product-card-image" style="overflow:hidden;padding:0;"><img src="images/kokum.jpg" alt="RiverDrop Kokum" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+          <div class="product-card-body">
+            <div class="product-brand-tag">RiverDrop</div>
+            <div class="product-card-name">Kokum</div>
+            <div class="product-card-tagline">Coastal tang, body soother</div>
+            <div class="product-price">₹35 / 250ml</div>
+            <a href="kokum.html" class="btn btn-primary">View Product</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS -->
+  <section class="reviews-section section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">What Our Customers Say</h2>
+      <p class="section-subtitle" style="text-align:center;">Real sips, real stories</p>
+      <div class="grid-3">
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"This Aam Panna takes me straight back to my nani's kitchen in Lucknow. The smokiness from the roasted cumin is spot-on and the jaggery gives it that authentic, earthy sweetness. I order three cases every summer — it's non-negotiable!"</p>
+          <div class="review-author">
+            <div class="review-avatar">🧕</div>
+            <div>
+              <div class="review-name">Priya Sharma</div>
+              <div class="review-location">New Delhi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I've tried many packaged Aam Pannas but RiverDrop is on a different level. It actually tastes like real raw mango — not some synthetic flavour. The black salt quantity is perfect, not too much, not too little. Absolutely love it!"</p>
+          <div class="review-author">
+            <div class="review-avatar">👨</div>
+            <div>
+              <div class="review-name">Arjun Mehta</div>
+              <div class="review-location">Mumbai</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"My kids refused to drink anything but cola during summers. I sneaked this Aam Panna into their glass and now they ask for it every day! Great way to get kids off artificial drinks. Fresh, natural and genuinely delicious."</p>
+          <div class="review-author">
+            <div class="review-avatar">👩</div>
+            <div>
+              <div class="review-name">Deepika Rajan</div>
+              <div class="review-location">Chennai</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🚣 RiverDrop</div>
+          <p class="footer-desc">Handcrafted Indian beverages rooted in tradition. Pure, natural, and delicious.</p>
+          <p style="margin-top:16px;font-size:1.5rem;">🌿 🚣 🫙</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Our Drinks</div>
+          <ul class="footer-links">
+            <li><a href="aam-panna.html">Aam Panna</a></li>
+            <li><a href="jaljeera.html">Jaljeera</a></li>
+            <li><a href="rose-sherbat.html">Rose Sherbat</a></li>
+            <li><a href="kokum.html">Kokum</a></li>
+            <li><a href="thandai.html">Thandai</a></li>
+            <li><a href="products.html">View All →</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Connect</div>
+          <ul class="footer-links">
+            <li>📍 Bengaluru, India</li>
+            <li>📞 +91 80 1234 5678</li>
+            <li>📧 hello@riverdrop.in</li>
+            <li style="margin-top:16px;font-size:1.5rem;"><a href="#" style="text-decoration:none;">📘</a> <a href="#" style="text-decoration:none;">📸</a> <a href="#" style="text-decoration:none;">🐦</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RiverDrop. All rights reserved. Made with ❤️ in India.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

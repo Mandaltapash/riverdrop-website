@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story – RiverDrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .story-hero {
+      background: linear-gradient(135deg, #FFF0E0 0%, #FFE4C8 50%, #FFD4A8 100%);
+      padding: 100px 0;
+      text-align: center;
+    }
+    .story-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 3.4rem;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .story-hero p {
+      font-size: 1.2rem;
+      color: var(--text-mid);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .origin-visual {
+      background: linear-gradient(135deg, #FFF0E0, #c8e6c9);
+      border-radius: 24px;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8rem;
+    }
+    .origin-text {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--text-mid);
+    }
+    .origin-text p {
+      margin-bottom: 24px;
+    }
+    .origin-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 16px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 48px;
+      position: relative;
+    }
+    .timeline-item:nth-child(odd) {
+      flex-direction: row;
+    }
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .timeline-year {
+      flex: 0 0 calc(50% - 32px);
+      text-align: right;
+      padding-right: 40px;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .timeline-item:nth-child(even) .timeline-year {
+      text-align: left;
+      padding-right: 0;
+      padding-left: 40px;
+    }
+    .timeline-dot {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 4px solid white;
+      box-shadow: 0 0 0 3px var(--primary);
+      margin-top: 2px;
+      position: relative;
+      z-index: 1;
+    }
+    .timeline-content {
+      flex: 0 0 calc(50% - 32px);
+      padding-left: 40px;
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+      padding-left: 0;
+      padding-right: 40px;
+      text-align: right;
+    }
+    .timeline-event-title {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .timeline-event-desc {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    .diff-section {
+      background: var(--light-bg);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">🚣 RiverDrop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="story.html" class="active">Our Story</a></li>
+      <li><a href="ingredients.html">Ingredients</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="container" style="padding-top:20px;padding-bottom:4px;">
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; <span>Our Story</span>
+  </nav>
+</div>
+
+<!-- Story Hero -->
+<section class="story-hero">
+  <div class="container">
+    <h1>The Story Behind Every Sip</h1>
+    <p>We didn't invent these flavours. They were always there — in grandmothers' kitchens, summer afternoons, and childhood memories. We just bottled them for you.</p>
+  </div>
+</section>
+
+<!-- Origin Story -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Where It All Began</h2>
+    <p class="section-subtitle">A kitchen in Thrissur. A childhood summer. A lifetime of flavour.</p>
+    <div class="grid-2" style="align-items:center;gap:48px;">
+      <div class="origin-visual">🏠</div>
+      <div class="origin-text">
+        <p>
+          Every great story begins somewhere small and deeply personal. For Arjun Nair, it began in his grandmother Kamakshi Amma's kitchen in Thrissur, Kerala — a narrow, sunlit room that smelled perpetually of raw mango, cardamom, and fresh mint. Each summer, as the Kerala heat rolled in thick and unforgiving, Kamakshi Amma would line the kitchen counter with clay pots of Aam Panna, rose petal sherbat, and tangy jaljeera — drinks that felt, in Arjun's words, "like the whole of India in a single sip."
+        </p>
+        <p>
+          It was these summers that never left Arjun. Through his years in culinary school, through eight years of research into traditional Indian beverage recipes, he kept returning to those flavours. He would call his grandmother for recipes — always too vague, always "a handful of this, a little of that" — and slowly, patiently, he learned to translate memory into measure. Each recipe went through dozens of iterations, tested on family, friends, and eventually on Chennai's discerning palates at a small farmers' market stall in 2009.
+        </p>
+        <p>
+          In 2010, alongside his college friend Priya Menon, Arjun launched RiverDrop from a rented kitchen space in Chennai — just 200 square feet, one cold press machine, and a dream. Their first product was Aam Panna. The first batch sold out in two hours. The second batch sold out before noon. They knew then that they weren't just selling a drink. They were selling a feeling — the irreplaceable warmth of tradition, the nostalgia of an Indian summer, the reassurance of something pure in a world full of artificial substitutes. That feeling is what RiverDrop has bottled, batch after careful batch, ever since.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="section" style="background: var(--light-bg);">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;">Our Journey</h2>
+    <p class="section-subtitle" style="text-align:center;">From a home kitchen to 15 states and counting</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-event-title">The Beginning 🌱</div>
+          <div class="timeline-event-desc">Started in a home kitchen in Thrissur with just one product — Aam Panna. The first batch of 50 bottles sold out at a Chennai farmers' market in under two hours.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2012</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-event-title">First Retail Listing 🛒</div>
+          <div class="timeline-event-desc">RiverDrop secured its first listing in Chennai supermarkets with 3 flavours: Aam Panna, Jaljeera, and Nimbu Pani. A milestone that proved the brand was ready for the mainstream.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2015</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-event-title">Expanding Horizons 🗺️</div>
+          <div class="timeline-event-desc">Expanded to 8 cities across South and West India. Launched Rose Sherbat and Kokum, cementing RiverDrop's reputation for bringing regional flavours to a national audience.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2019</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-event-title">1 Lakh Bottles &amp; Holi Special 🎉</div>
+          <div class="timeline-event-desc">Reached the milestone of 1 lakh bottles sold. Launched Thandai as a limited-edition Holi special — it sold out within days and became a permanent fan favourite.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-event-title">A National Brand 🇮🇳</div>
+          <div class="timeline-event-desc">10+ flavours. 15 states. 50,000+ happy customers. RiverDrop is now a beloved household name across India — and we're only just getting started.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- What Makes Us Different -->
+<section class="section diff-section">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;">What Makes Us Different</h2>
+    <p class="section-subtitle" style="text-align:center;">Our commitments that set every RiverDrop bottle apart</p>
+    <div class="grid-3">
+
+      <div class="feature-box">
+        <div class="feature-icon">🌾</div>
+        <div class="feature-title">Farm-Direct Ingredients</div>
+        <p class="feature-desc">Our ingredients come directly from farmers we know by name. No middlemen, no compromises. The raw mangoes in your Aam Panna were harvested by the same families we have worked with since 2011.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">🧪</div>
+        <div class="feature-title">100+ Recipe Tests</div>
+        <p class="feature-desc">Every recipe is tested more than 100 times before it leaves our kitchen. We tweak, adjust, refine, and repeat until it tastes exactly the way tradition intended — not a shortcut in sight.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">👨‍👩‍👧</div>
+        <div class="feature-title">Family Recipes, Modern Touch</div>
+        <p class="feature-desc">We start with family recipes passed down through generations, then apply modern food science to ensure consistency, shelf life, and safety — without ever losing the heart of the original.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🚣 RiverDrop</div>
+        <p class="footer-desc">Handcrafted Indian beverages rooted in tradition. Pure, natural, and delicious.</p>
+        <p style="margin-top:16px;font-size:1.5rem;">🌿 🚣 🫙</p>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Our Drinks</div>
+        <ul class="footer-links">
+          <li><a href="aam-panna.html">Aam Panna</a></li>
+          <li><a href="jaljeera.html">Jaljeera</a></li>
+          <li><a href="rose-sherbat.html">Rose Sherbat</a></li>
+          <li><a href="kokum.html">Kokum</a></li>
+          <li><a href="thandai.html">Thandai</a></li>
+          <li><a href="products.html">View All →</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Connect</div>
+        <ul class="footer-links">
+          <li>📍 Bengaluru, India</li>
+          <li>📞 +91 80 1234 5678</li>
+          <li>📧 hello@riverdrop.in</li>
+          <li style="margin-top:16px;font-size:1.5rem;"><a href="#" style="text-decoration:none;">📘</a> <a href="#" style="text-decoration:none;">📸</a> <a href="#" style="text-decoration:none;">🐦</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RiverDrop. All rights reserved. Made with ❤️ in India.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

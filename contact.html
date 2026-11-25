@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get in Touch — RiverDrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ---- Contact page specific styles ---- */
+    .contact-hero {
+      background: linear-gradient(135deg, #FFF0E0 0%, #FFE4C8 100%);
+      padding: 72px 0;
+      text-align: center;
+    }
+    .contact-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+    .contact-hero p {
+      font-size: 1.15rem;
+      color: var(--text-mid);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-form-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .contact-info-box {
+      background: var(--light-bg);
+      border-radius: 16px;
+      padding: 40px;
+    }
+    .contact-info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+    .contact-info-item:last-child {
+      margin-bottom: 0;
+    }
+    .contact-info-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+    .contact-info-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .contact-info-value {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    .map-placeholder {
+      height: 300px;
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .map-placeholder-emoji {
+      font-size: 5rem;
+      margin-bottom: 12px;
+    }
+    .map-placeholder-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .social-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .social-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    }
+    .social-icon {
+      font-size: 2.8rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .social-platform {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .social-handle {
+      font-size: 0.95rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    select.form-input {
+      appearance: none;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🚣 RiverDrop</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="ingredients.html">Ingredients</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="container" style="padding-top:20px;padding-bottom:4px;">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Contact</span>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM + INFO -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Contact Form -->
+        <div class="contact-form-card">
+          <h2 class="section-title" style="font-size:2rem;margin-bottom:8px;">Send Us a Message</h2>
+          <p style="color:var(--text-mid);margin-bottom:28px;">Have feedback, a bulk order request, or just want to say hello? Fill out the form below.</p>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone (Optional)</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <select class="form-input" id="subject" name="subject">
+                <option value="general">General Enquiry</option>
+                <option value="order">Order Issue</option>
+                <option value="partnership">Partnership</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;text-align:center;">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info Box -->
+        <div class="contact-info-box">
+          <h2 class="section-title" style="font-size:1.8rem;margin-bottom:28px;">Contact Details</h2>
+
+          <div class="contact-info-item">
+            <span class="contact-info-icon">📍</span>
+            <div>
+              <div class="contact-info-label">Visit Us</div>
+              <p class="contact-info-value">RiverDrop HQ, 42 Indiranagar Main Road, Bengaluru 560038</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-icon">📞</span>
+            <div>
+              <div class="contact-info-label">Call Us</div>
+              <p class="contact-info-value">+91 80 1234 5678 (Mon–Sat, 9am–6pm)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-icon">📧</span>
+            <div>
+              <div class="contact-info-label">Email Us</div>
+              <p class="contact-info-value">hello@riverdrop.in | business@riverdrop.in</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-icon">⏰</span>
+            <div>
+              <div class="contact-info-label">Working Hours</div>
+              <p class="contact-info-value">Monday to Saturday: 9:00 AM – 6:00 PM IST. Closed on Sundays and national holidays.</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-icon">🚚</span>
+            <div>
+              <div class="contact-info-label">Order Queries</div>
+              <p class="contact-info-value">For order-related queries, please email orders@riverdrop.in with your order ID.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Placeholder -->
+      <div class="map-placeholder">
+        <div class="map-placeholder-emoji">🗺️</div>
+        <div class="map-placeholder-text">Bengaluru, Karnataka, India</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL MEDIA SECTION -->
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Follow Our Journey</h2>
+      <p class="section-subtitle" style="text-align:center;">Join our community of traditional Indian beverage lovers across social media.</p>
+      <div class="grid-4">
+        <div class="social-card">
+          <span class="social-icon">📘</span>
+          <div class="social-platform">Facebook</div>
+          <div class="social-handle">/RiverDropIndia</div>
+        </div>
+        <div class="social-card">
+          <span class="social-icon">📸</span>
+          <div class="social-platform">Instagram</div>
+          <div class="social-handle">@riverdrop.in</div>
+        </div>
+        <div class="social-card">
+          <span class="social-icon">🐦</span>
+          <div class="social-platform">Twitter</div>
+          <div class="social-handle">@RiverDropHQ</div>
+        </div>
+        <div class="social-card">
+          <span class="social-icon">📺</span>
+          <div class="social-platform">YouTube</div>
+          <div class="social-handle">RiverDrop Kitchen</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🚣 RiverDrop</div>
+          <p class="footer-desc">Handcrafted Indian beverages rooted in tradition. Pure, natural, and delicious.</p>
+          <p style="margin-top:16px;font-size:1.5rem;">🌿 🚣 🫙</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Our Drinks</div>
+          <ul class="footer-links">
+            <li><a href="aam-panna.html">Aam Panna</a></li>
+            <li><a href="jaljeera.html">Jaljeera</a></li>
+            <li><a href="rose-sherbat.html">Rose Sherbat</a></li>
+            <li><a href="kokum.html">Kokum</a></li>
+            <li><a href="thandai.html">Thandai</a></li>
+            <li><a href="products.html">View All →</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Connect</div>
+          <ul class="footer-links">
+            <li>📍 Bengaluru, India</li>
+            <li>📞 +91 80 1234 5678</li>
+            <li>📧 hello@riverdrop.in</li>
+            <li style="margin-top:16px;font-size:1.5rem;"><a href="#" style="text-decoration:none;">📘</a> <a href="#" style="text-decoration:none;">📸</a> <a href="#" style="text-decoration:none;">🐦</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RiverDrop. All rights reserved. Made with ❤️ in India.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

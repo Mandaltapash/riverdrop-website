@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Ingredients — RiverDrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ---- Ingredients page specific styles ---- */
+    .ingredients-hero {
+      background: linear-gradient(135deg, #2A7F5E, #1a5c43);
+      color: white;
+      padding: 100px 0;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+    }
+    .ingredients-hero .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: white;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .ingredients-hero .hero-subtitle {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 620px;
+      line-height: 1.7;
+    }
+
+    /* Intro 2-col */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .intro-text p {
+      font-size: 1.08rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+    .intro-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .stat-box {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Ingredient cards */
+    .ingredient-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .ingredient-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+    }
+    .ingredient-emoji {
+      font-size: 3.2rem;
+      display: block;
+      margin-bottom: 14px;
+    }
+    .ingredient-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .ingredient-benefit {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    /* Sourcing section */
+    .sourcing-section {
+      background: var(--light-bg);
+      padding: 80px 0;
+    }
+    .location-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      transition: transform 0.3s;
+    }
+    .location-card:hover {
+      transform: translateY(-4px);
+    }
+    .location-pin {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .location-region {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .location-state {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .location-produces {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🚣 RiverDrop</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="ingredients.html" class="active">Ingredients</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="container" style="padding-top:20px;padding-bottom:4px;">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Ingredients</span>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="ingredients-hero">
+    <div class="container">
+      <h1 class="hero-title">🌿 Our Ingredients</h1>
+      <p class="hero-subtitle">Every sip begins with the finest natural ingredients sourced directly from Indian farms. From sun-ripened mangoes to hand-picked rose petals, we bring you nature at its purest.</p>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <h2 class="section-title">Nature First, Always</h2>
+          <p>At RiverDrop, every bottle begins its journey long before it reaches our production floor. We work directly with over 15 partner farms spread across the heartlands of Kerala, Karnataka, Rajasthan, and Maharashtra — regions that have been nurturing the ingredients behind India's most beloved traditional beverages for centuries.</p>
+          <p>Our sourcing team visits each farm personally, ensuring the soil is healthy, the farming practices are sustainable, and the produce is harvested at peak ripeness. By cutting out middlemen entirely, we not only get fresher ingredients at better prices — we also build lasting relationships with the farmers who make RiverDrop possible.</p>
+          <p>We maintain an absolute zero-compromise policy on artificial additives. No artificial flavours, no synthetic colours, no chemical preservatives — ever. What you taste in every sip is exactly what nature intended, carefully preserved and crafted by our team of traditional recipe experts.</p>
+        </div>
+        <div class="intro-stats">
+          <div class="stat-box">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Natural</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Artificial Flavours</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Partner Farms</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Ingredients Used</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN INGREDIENTS GRID -->
+  <section class="section" style="background: var(--light-bg); padding: 80px 0;">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">The Building Blocks of Every Sip</h2>
+      <p class="section-subtitle" style="text-align:center;">Meet the ingredients that go into our beverages — each chosen for its flavour, heritage, and health benefits.</p>
+      <div class="grid-4">
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🥭</span>
+          <div class="ingredient-name">Raw Mango</div>
+          <p class="ingredient-benefit">High in Vitamin C, cooling for summers</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🌿</span>
+          <div class="ingredient-name">Mint Leaves</div>
+          <p class="ingredient-benefit">Digestive, cooling, freshens breath</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🧂</span>
+          <div class="ingredient-name">Black Salt (Kala Namak)</div>
+          <p class="ingredient-benefit">Rich in minerals, electrolyte replenisher</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🌾</span>
+          <div class="ingredient-name">Roasted Cumin</div>
+          <p class="ingredient-benefit">Aids digestion, anti-bloating</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🌹</span>
+          <div class="ingredient-name">Rose Petals</div>
+          <p class="ingredient-benefit">Antioxidant-rich, mood-lifting, anti-inflammatory</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🫐</span>
+          <div class="ingredient-name">Kokum</div>
+          <p class="ingredient-benefit">Hydroxycitric acid, anti-obesity, cooling</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🥛</span>
+          <div class="ingredient-name">Almonds</div>
+          <p class="ingredient-benefit">Brain food, rich in Vitamin E and healthy fats</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🌸</span>
+          <div class="ingredient-name">Saffron (Kesar)</div>
+          <p class="ingredient-benefit">Mood enhancer, antioxidant, anti-depressant</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🥕</span>
+          <div class="ingredient-name">Black Carrot</div>
+          <p class="ingredient-benefit">Anthocyanins, probiotic-friendly, antioxidant</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🫙</span>
+          <div class="ingredient-name">Mustard Seeds</div>
+          <p class="ingredient-benefit">Anti-microbial, aids fermentation</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">🍬</span>
+          <div class="ingredient-name">Jaggery</div>
+          <p class="ingredient-benefit">Unrefined natural sweetener, iron-rich, digestive</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ingredient-emoji">💚</span>
+          <div class="ingredient-name">Cardamom (Elaichi)</div>
+          <p class="ingredient-benefit">Aromatic, digestive, anti-bacterial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCING MAP SECTION -->
+  <section class="sourcing-section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Where We Source</h2>
+      <p class="section-subtitle" style="text-align:center;">Our ingredients travel from the most fertile corners of India to your glass.</p>
+      <div class="grid-4">
+        <div class="location-card">
+          <span class="location-pin">📍</span>
+          <div class="location-region">Thrissur, Kerala</div>
+          <div class="location-state">🌴 South India</div>
+          <p class="location-produces">Raw Mangoes, Kokum</p>
+        </div>
+        <div class="location-card">
+          <span class="location-pin">📍</span>
+          <div class="location-region">Jaipur, Rajasthan</div>
+          <div class="location-state">🏜️ West India</div>
+          <p class="location-produces">Rose Petals, Saffron</p>
+        </div>
+        <div class="location-card">
+          <span class="location-pin">📍</span>
+          <div class="location-region">Pune, Maharashtra</div>
+          <div class="location-state">🌾 West India</div>
+          <p class="location-produces">Black Carrots, Jaggery</p>
+        </div>
+        <div class="location-card">
+          <span class="location-pin">📍</span>
+          <div class="location-region">Mysuru, Karnataka</div>
+          <div class="location-state">🌿 South India</div>
+          <p class="location-produces">Cardamom, Mint</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR PROMISE SECTION -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Our Promise to You</h2>
+      <p class="section-subtitle" style="text-align:center;">We hold ourselves to the highest standards — from farm to bottle to your hands.</p>
+      <div class="grid-3">
+        <div class="feature-box">
+          <div class="feature-icon">🤝</div>
+          <div class="feature-title">Direct from Farmers</div>
+          <p class="feature-desc">No middlemen. We work directly with 15+ partner farms across India, ensuring farmers get fair prices and we get the freshest produce.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">🔬</div>
+          <div class="feature-title">Lab Tested</div>
+          <p class="feature-desc">Every batch is tested for purity, pesticides, and quality before use. Our in-house quality lab runs checks at every stage of production.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">🌱</div>
+          <div class="feature-title">Sustainably Grown</div>
+          <p class="feature-desc">We support organic and sustainable farming practices exclusively. Healthy soil grows healthy ingredients that make healthy beverages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🚣 RiverDrop</div>
+          <p class="footer-desc">Handcrafted Indian beverages rooted in tradition. Pure, natural, and delicious.</p>
+          <p style="margin-top:16px;font-size:1.5rem;">🌿 🚣 🫙</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Our Drinks</div>
+          <ul class="footer-links">
+            <li><a href="aam-panna.html">Aam Panna</a></li>
+            <li><a href="jaljeera.html">Jaljeera</a></li>
+            <li><a href="rose-sherbat.html">Rose Sherbat</a></li>
+            <li><a href="kokum.html">Kokum</a></li>
+            <li><a href="thandai.html">Thandai</a></li>
+            <li><a href="products.html">View All →</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Connect</div>
+          <ul class="footer-links">
+            <li>📍 Bengaluru, India</li>
+            <li>📞 +91 80 1234 5678</li>
+            <li>📧 hello@riverdrop.in</li>
+            <li style="margin-top:16px;font-size:1.5rem;"><a href="#" style="text-decoration:none;">📘</a> <a href="#" style="text-decoration:none;">📸</a> <a href="#" style="text-decoration:none;">🐦</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RiverDrop. All rights reserved. Made with ❤️ in India.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

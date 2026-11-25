@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions — RiverDrop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ---- FAQ page specific styles ---- */
+    .faq-hero {
+      background: var(--light-bg);
+      padding: 72px 0;
+      text-align: center;
+    }
+    .faq-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+    .faq-hero p {
+      font-size: 1.15rem;
+      color: var(--text-mid);
+    }
+
+    .faq-group {
+      margin-bottom: 56px;
+    }
+    .faq-group-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--light-bg);
+    }
+
+    .faq-cta {
+      background: var(--primary);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .faq-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+    }
+    .faq-cta p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 32px;
+    }
+    .btn-white {
+      background: white;
+      color: var(--primary);
+    }
+    .btn-white:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🚣 RiverDrop</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="ingredients.html">Ingredients</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="container" style="padding-top:20px;padding-bottom:4px;">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>FAQ</span>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="faq-hero">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p>Got questions? We have answers.</p>
+    </div>
+  </section>
+
+  <!-- FAQ SECTIONS -->
+  <section class="section">
+    <div class="container" style="max-width:860px;">
+
+      <!-- Section 1: About Our Products -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">About Our Products</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">Are RiverDrop drinks 100% natural?</div>
+          <div class="faq-answer">Yes, every single ingredient in our drinks is 100% natural. We use no artificial flavours, colours, or preservatives. Our recipes are inspired by traditional Indian formulations and have been crafted with just the ingredients nature intended.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do your drinks contain sugar?</div>
+          <div class="faq-answer">Our drinks are sweetened with natural sweeteners like jaggery, cane sugar, or fruit sugars — never refined white sugar or artificial sweeteners. The sweetness levels are carefully calibrated to match traditional recipes.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Are RiverDrop drinks suitable for children?</div>
+          <div class="faq-answer">Yes! Our drinks are made from natural ingredients and are safe for children above 2 years of age. However, Thandai contains nut-based ingredients, so please check for allergies before giving it to children.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do you have any drinks for diabetics?</div>
+          <div class="faq-answer">Jaljeera and Kanji are our lowest sugar options and may be suitable for diabetics in moderation. However, we recommend consulting your doctor before including any sweetened beverage in a diabetic diet.</div>
+        </div>
+      </div>
+
+      <!-- Section 2: Ordering & Shipping -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Ordering &amp; Shipping</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I place an order?</div>
+          <div class="faq-answer">You can place orders directly through our website by clicking 'Add to Cart' on any product page, or by calling us at +91 80 1234 5678. We also partner with major e-commerce platforms like Amazon, Flipkart, and BigBasket.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do you ship across India?</div>
+          <div class="faq-answer">Yes! We currently ship to 15 states across India. Major metros receive delivery in 2-3 business days. For other cities and towns, delivery takes 4-6 business days.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is there a minimum order value?</div>
+          <div class="faq-answer">There is no minimum order value for local Bengaluru orders. For pan-India shipping, a minimum cart value of ₹299 applies. Free shipping on orders above ₹599.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I return or exchange products?</div>
+          <div class="faq-answer">We accept returns if the product arrives damaged or if there is a manufacturing defect. Please raise a return request within 48 hours of delivery with photos of the product. We do not accept returns due to change of mind for perishable items.</div>
+        </div>
+      </div>
+
+      <!-- Section 3: Storage & Shelf Life -->
+      <div class="faq-group">
+        <h2 class="faq-group-title">Storage &amp; Shelf Life</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">How long do the drinks last?</div>
+          <div class="faq-answer">Unopened, our sealed bottles last 6-9 months from the manufacturing date. Once opened, consume within 2-3 days. Kanji, being a fermented product, should be consumed within 7 days of opening and kept refrigerated.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do I need to refrigerate the drinks?</div>
+          <div class="faq-answer">Unopened bottles can be stored at room temperature, away from direct sunlight. After opening, always refrigerate and consume quickly. Kanji must be refrigerated at all times.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Why does my drink look slightly different each batch?</div>
+          <div class="faq-answer">Because we use 100% natural ingredients, there can be slight variations in colour and flavour between batches — just like home cooking! This is a sign of authenticity, not a defect. The taste and quality remain consistently excellent.</div>
+        </div>
+      </div>
+
+      <!-- Section 4: About RiverDrop -->
+      <div class="faq-group" style="margin-bottom:0;">
+        <h2 class="faq-group-title">About RiverDrop</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">Where are RiverDrop drinks made?</div>
+          <div class="faq-answer">Our beverages are crafted at our state-of-the-art production facility in Bengaluru, Karnataka. Our quality control lab ensures every batch meets our exacting standards before it leaves our facility.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do you sell in physical stores?</div>
+          <div class="faq-answer">Yes! RiverDrop is available at select premium supermarkets and health stores across Bengaluru, Chennai, Mumbai, Delhi, Hyderabad, and Pune. Use our Store Locator (coming soon) to find the nearest outlet.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I partner with RiverDrop for bulk or corporate orders?</div>
+          <div class="faq-answer">Absolutely! We offer bulk discounts for corporate gifting, events, and retail partners. Please email us at business@riverdrop.in or call +91 80 1234 5678 for partnership enquiries.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STILL HAVE QUESTIONS CTA -->
+  <section class="faq-cta">
+    <div class="container">
+      <h2>Still have questions?</h2>
+      <p>Our friendly team in Bengaluru is happy to help with anything you need.</p>
+      <a href="contact.html" class="btn btn-white">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🚣 RiverDrop</div>
+          <p class="footer-desc">Handcrafted Indian beverages rooted in tradition. Pure, natural, and delicious.</p>
+          <p style="margin-top:16px;font-size:1.5rem;">🌿 🚣 🫙</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Our Drinks</div>
+          <ul class="footer-links">
+            <li><a href="aam-panna.html">Aam Panna</a></li>
+            <li><a href="jaljeera.html">Jaljeera</a></li>
+            <li><a href="rose-sherbat.html">Rose Sherbat</a></li>
+            <li><a href="kokum.html">Kokum</a></li>
+            <li><a href="thandai.html">Thandai</a></li>
+            <li><a href="products.html">View All →</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Connect</div>
+          <ul class="footer-links">
+            <li>📍 Bengaluru, India</li>
+            <li>📞 +91 80 1234 5678</li>
+            <li>📧 hello@riverdrop.in</li>
+            <li style="margin-top:16px;font-size:1.5rem;"><a href="#" style="text-decoration:none;">📘</a> <a href="#" style="text-decoration:none;">📸</a> <a href="#" style="text-decoration:none;">🐦</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RiverDrop. All rights reserved. Made with ❤️ in India.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
